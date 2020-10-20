@@ -17,10 +17,10 @@ library(leaflet)
 map <- leaflet() %>% addTiles()
 ```
 
-Create a marker with a picture of Benrath Palace and a link to its homepage.
+Create a marker with a picture of Taj Mahal and a link to its homepage.
 ```{r}
-benrathPalaceIcon <- makeIcon(
-   iconUrl = "http://www.schloss-benrath.de/fileadmin/_processed_/csm_corps-de-logis-blumen_2e04b2b859.jpg",
+TajMahalIcon <- makeIcon(
+   iconUrl = "https://thumbs-prod.si-cdn.com/E0Lm_ZfhHbqapE5Amhv-aiu8XYA=/1072x720/filters:no_upscale():focal(1471x1061:1472x1062)/https://public-media.si-cdn.com/filer/b6/30/b630b48b-7344-4661-9264-186b70531bdc/istock-478831658.jpg",
    iconWidth = 30*408/255, iconHeight = 30,
    iconAnchorX = 30*408/255/2, iconAnchorY = 30/2
 )
@@ -28,8 +28,8 @@ benrathPalaceIcon <- makeIcon(
 
 Add the marker to the map and display the map.
 ```{r}
-benrathPalacePopup <- c("<a href= 'http://www.schloss-benrath.de/welcome/?L=1' >Benrath Palace<br><img src='http://www.schloss-benrath.de/fileadmin/_processed_/csm_corps-de-logis-blumen_2e04b2b859.jpg' width='210' height='132'  alt='Foto Corps de Logis' title='Foto Corps de Logi'></a>")
+TajMahalPopup <- c("<a href= 'https://en.wikipedia.org/wiki/Taj_Mahal' >Taj Mahal<br><img src='https://thumbs-prod.si-cdn.com/E0Lm_ZfhHbqapE5Amhv-aiu8XYA=/1072x720/filters:no_upscale():focal(1471x1061:1472x1062)/https://public-media.si-cdn.com/filer/b6/30/b630b48b-7344-4661-9264-186b70531bdc/istock-478831658.jpg' width='210' height='132'  alt='taj mahal' title='taj mahal'></a>")
 map %>%
    addTiles() %>%
-   addMarkers(lat=51.161027, lng=6.870550, popup = benrathPalacePopup)
+   addMarkers(lat=27.1751, lng=78.0421, popup = TajMahalPopup)
 ```
